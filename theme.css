@@ -31,3 +31,21 @@ body {
 #cheatNumberEl.ended {
 	font-size: 100px;
 }
+
+#downloadBtn {
+	position: fixed;
+	bottom: 30px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #333;
+	opacity: 0;
+	transition: 0.4s;
+}
+
+#downloadBtn.show {
+	opacity: 1;
+}
+
+#downloadBtn:hover {
+	color: #000;
+}

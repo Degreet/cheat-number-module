@@ -18,7 +18,14 @@ cheatNumber({
 
 		if (isEnded) {
 			cheatNumberEl.classList.add('ended');
-			setTimeout(() => cheatNumberEl.classList.remove('ended'), 1000);
+			setTimeout(() => {
+				cheatNumberEl.classList.remove('ended');
+
+				cheatNumberEl.ontransitionend = () => {
+					cheatNumberEl.ontransitionend = null;
+					downloadBtn.classList.add('show');
+				};
+			}, 1000);
 		}
 	},
 });
