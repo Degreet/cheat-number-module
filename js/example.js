@@ -8,6 +8,7 @@ function rndNum(min, max) {
 cheatNumber({
 	from,
 	to,
+	step: 1,
 	interval: 10,
 	customInterval: {
 		startOn: 10,
