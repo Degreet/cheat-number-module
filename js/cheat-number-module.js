@@ -2,8 +2,9 @@ function cheatNumber(params) {
 	let { from, to, callback } = params;
 	let customInterval, step;
 
-	if (!from) return console.error('From number not found');
-	else if (!to) return console.error('To number not found');
+	if (typeof from !== 'number') return console.error('From number not found');
+	else if (typeof from !== 'number')
+		return console.error('To number not found');
 	else if (!callback || typeof callback !== 'function')
 		return console.error('Callback not found');
 
